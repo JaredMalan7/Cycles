@@ -29,6 +29,12 @@ class ControlActorsAction(Action):
             cast (Cast): The cast of Actors in the game.
             script (Script): The script of Actions in the game.
         """
+        
+        _move_left = 'a'
+        _move_right = 'd'
+        _move_up = 'w'
+        _move_down = 's'
+        
         # left
         if self._keyboard_service.is_key_down('a'):
             self._direction = Point(-constants.CELL_SIZE, 0)
