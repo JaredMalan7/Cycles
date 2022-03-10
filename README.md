@@ -19,13 +19,15 @@ project folder. Select the main module inside the Cycles folder and click the "r
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- cse210-04           (source code for game)
++-- Cycles              (source code for game)
   +-- game              (specific game classes)
     +-- casting         (game artifacts and actor)
     +-- directing       (game director)
+    +-- scripting       (control actors actions)
     +-- services        (keyboard and video services)
     +-- shared          (game color and point)
   +-- __main__.py       (entry point for program)
+  +--constants          (constant values)
 +-- README.md           (general info)
 ```
 

@@ -5,8 +5,10 @@ from game.shared.point import Point
 
 class Snake(Actor):
     """
-    A long limbless reptile.
+    A long limbless reptile number 1.
+
     The responsibility of Snake is to move itself.
+    
     Attributes:
         _points (int): The number of points the food is worth.
     """

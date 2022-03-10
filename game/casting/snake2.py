@@ -6,7 +6,7 @@ from game.casting.snake import Snake
 class Snake2(Snake):
 
     """
-    A long limbless reptile.
+    A long limbless reptile number 2.
 
     The responsibility of Snake is to move itself.
 
