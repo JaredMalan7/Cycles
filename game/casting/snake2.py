@@ -14,6 +14,7 @@ class Snake2(Snake):
         _points (int): The number of points the food is worth.
     """
 
+    """
     def __init__(self):
         super().__init__()
         self._segments = []
@@ -38,3 +39,8 @@ class Snake2(Snake):
             segment = Actor()
             segment.set_color(color)
             self._segments.append(segment)
+    """
+    def set_body_color(self):
+        return constants.RED
+    def set_coors(self):
+        return [4, 4]
