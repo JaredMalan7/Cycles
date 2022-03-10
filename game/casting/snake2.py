@@ -28,7 +28,7 @@ class Snake2(Snake):
             segment.set_color(constants.RED)
             # self._segments.append(segment)
 
-    def _prepare_body(self, head_symbol="@"):
+    def _prepare_body(self):
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
 
@@ -38,4 +38,3 @@ class Snake2(Snake):
             segment = Actor()
             segment.set_color(color)
             self._segments.append(segment)
-
