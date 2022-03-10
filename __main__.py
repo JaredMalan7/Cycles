@@ -19,7 +19,6 @@ from game.shared.point import Point
 
 def main():
 
-    # create the cast
     cast = Cast()
     cast.add_actor("foods", Food())
     x = int(constants.MAX_X / 2)
@@ -37,7 +36,6 @@ def main():
     script = Script()
     script.add_action("input", ControlActorsAction(keyboard_service))
     script.add_action("input", ControlActorsAction_2(keyboard_service))
-
     script.add_action("update", MoveActorsAction())
     script.add_action("update", HandleCollisionsAction())
     script.add_action("output", DrawActorsAction(video_service))

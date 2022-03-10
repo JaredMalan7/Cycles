@@ -6,7 +6,7 @@ from game.casting.snake import Snake
 class Snake2(Snake):
 
     """
-    A long limbless reptile number 2.
+    A long limbless reptile.
 
     The responsibility of Snake is to move itself.
 
@@ -28,11 +28,11 @@ class Snake2(Snake):
             segment.set_color(constants.RED)
             # self._segments.append(segment)
 
-    def _prepare_body(self):
+    def _prepare_body(self, head_symbol="@"):
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
 
-        for i in range(constants.SNAKE_LENGTH):
+        for i in range(constants.SNAKE_LENGTH, head_symbol="@"):
 
             color = constants.RED if i == 0 else constants.RED
             segment = Actor()

@@ -5,9 +5,9 @@ from game.shared.point import Point
 
 class ControlActorsAction(Action):
     """
-    An input action that controls the snake.
+    An input action that controls the actor.
 
-    The responsibility of ControlActorsAction is to get the direction and move the snake's head.
+    The responsibility of ControlActorsAction is to get the direction and move the actor's head.
 
     Attributes:
         _keyboard_service (KeyboardService): An instance of KeyboardService.
@@ -51,5 +51,5 @@ class ControlActorsAction(Action):
         if self._keyboard_service.is_key_down(_move_down):
             self._direction = Point(0, constants.CELL_SIZE)
 
-        snake = cast.get_first_actor("snakes", 0)
+        snake = cast.get_actor("snakes", 0)
         snake.turn_head(self._direction)
