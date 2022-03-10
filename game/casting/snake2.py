@@ -32,7 +32,7 @@ class Snake2(Snake):
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
 
-        for i in range(constants.SNAKE_LENGTH, head_symbol="@"):
+        for i in range(constants.SNAKE_LENGTH):
 
             color = constants.RED if i == 0 else constants.RED
             segment = Actor()
