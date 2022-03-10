@@ -1,9 +1,10 @@
 import constants
-from game.scripting.action import Action
+#from game.scripting.action import Action
 from game.shared.point import Point
+from game.scripting.control_actors_action import ControlActorsAction
 
 
-class ControlActorsAction_1(Action):
+#class ControlActorsAction_1(ControlActorsAction):
     # """
     # An input action that controls the snake.
 
@@ -13,14 +14,14 @@ class ControlActorsAction_1(Action):
     #     _keyboard_service (KeyboardService): An instance of KeyboardService.
     # """
 
-    def __init__(self, keyboard_service):
+    #def __init__(self, cast, script):
         """Constructs a new ControlActorsAction using the specified KeyboardService.
 
         Args:
             keyboard_service (KeyboardService): An instance of KeyboardService.
         """
-        self._keyboard_service = keyboard_service
-        self._direction = Point(constants.CELL_SIZE, 0)
+        #self._keyboard_service = keyboard_service
+        #self._direction = Point(constants.CELL_SIZE, 0)
 
     def execute(self, cast, script):
         """Executes the control actors action.
@@ -45,6 +46,6 @@ class ControlActorsAction_1(Action):
         if self._keyboard_service.is_key_down('k'):
             self._direction = Point(0, constants.CELL_SIZE)
 
-        snake1 = cast.get_first_actor("snakes1")
+        snake1 = cast.get_actor("snakes", 1)
 
         snake1.turn_head(self._direction)
