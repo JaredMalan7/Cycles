@@ -36,7 +36,7 @@ def main():
 
     script = Script()
     script.add_action("input", ControlActorsAction(keyboard_service))
-    script.add_action("input", ControlActorsAction_1(keyboard_service))
+    script.add_action("input", ControlActorsAction_2(keyboard_service))
 
     script.add_action("update", MoveActorsAction())
     script.add_action("update", HandleCollisionsAction())
