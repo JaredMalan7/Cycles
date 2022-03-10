@@ -2,6 +2,7 @@ import constants
 
 from game.casting.cast import Cast
 from game.casting.food import Food
+from game.casting.food import Food2
 from game.casting.score import Score
 from game.casting.score2 import Score2
 from game.casting.snake import Snake
@@ -22,14 +23,13 @@ def main():
 
     cast = Cast()
     cast.add_actor("foods", Food())
-    x = int(constants.MAX_X / 2)
-    y = int(constants.MAX_Y / 2)
-    x1 = int(constants.MAX_X / 4)
-    y1 = int(constants.MAX_Y / 4)
-    cast.add_actor("snakes", Snake("@", constants.GREEN, x, y))
-    cast.add_actor("snakes", Snake("@", constants.RED, x1, y1))
+    cast.add_actor("snakes", Snake())
     cast.add_actor("scores", Score())
-    cast.add_actor("scores", Score2())
+    
+    cast.add_actor("foods2", Food2())
+    cast.add_actor("snakes2", Snake2())
+    cast.add_actor("scores2", Score2())
+    
 
     # start the game
     keyboard_service = KeyboardService()
