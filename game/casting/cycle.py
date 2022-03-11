@@ -1,7 +1,7 @@
 import constants
 #from game.casting.actor import Actor
 #from game.shared.point import Point
-from gram.casting.food import Food
+from game.casting.food import Food
 
 
 

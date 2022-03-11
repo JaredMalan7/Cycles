@@ -32,37 +32,37 @@ class HandleCollisionsAction(Action):
             self._handle_game_over(cast)
 
     def _handle_food_collision(self, cast):
-         """Updates the score nd moves the food if the snake collides with the food.
+        """Updates the score nd moves the food if the snake collides with the food.
 
-         Args:
-             cast (Cast): The cast of Actors in the game.
-         """
-         score = cast.get_first_actor("scores")
+        Args:
+            cast (Cast): The cast of Actors in the game.
+        """
+        score = cast.get_first_actor("scores")
         score2 = cast.get_first_actor("scores2")
         
-         food = cast.get_first_actor("foods")
-         food2 = cast.get_first_actor("foods2")
-        
-         snake = cast.get_first_actor("snakes")
-         snake2 = cast.get_first_actor("snakes2")
-        
-         head = snake.get_head()
-         head2 = snake2.get_head()
+        food = cast.get_first_actor("foods")
+        food2 = cast.get_first_actor("foods2")
+    
+        snake = cast.get_first_actor("snakes")
+        snake2 = cast.get_first_actor("snakes2")
+    
+        head = snake.get_head()
+        head2 = snake2.get_head()
 
         #This is so that the snake 1 gets points when eating the food
-         if head.get_position().equals(food.get_position()):
-             points = food.get_points()
-             snake.grow_tail(points)
-             score.add_points(points)
-             food.reset()
+        if head.get_position().equals(food.get_position()):
+            points = food.get_points()
+            snake.grow_tail(points)
+            score.add_points(points)
+            food.reset()
                 
                 
          #This is so that the snake 2 gets points when eating the food       
-         if head2.get_position().equals(food2.get_position()):
-             points2 = food.get_points()
-             snake2.grow_tail(points2)
-             score2.add_points(points2)
-             food2.reset()
+        if head2.get_position().equals(food2.get_position()):
+            points2 = food.get_points()
+            snake2.grow_tail(points2)
+            score2.add_points(points2)
+            food2.reset()
                 
 
     def _handle_segment_collision(self, cast):
