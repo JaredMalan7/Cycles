@@ -14,12 +14,12 @@ class ControlActorsAction_2(Action):
         _keyboard_service (KeyboardService): An instance of KeyboardService.
     """
     
-   def __init__(self, keyboard_service):
-    """Constructs a new ControlActorsAction using the specified KeyboardService.
+    def __init__(self, keyboard_service):
+        """Constructs a new ControlActorsAction using the specified KeyboardService.
 
-    Args:
-        keyboard_service (KeyboardService): An instance of KeyboardService.
-    """
+        Args:
+            keyboard_service (KeyboardService): An instance of KeyboardService.
+        """
         self._keyboard_service = keyboard_service
         self._direction = Point(constants.CELL_SIZE, 0)
 
