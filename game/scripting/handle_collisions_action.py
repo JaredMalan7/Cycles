@@ -73,7 +73,7 @@ class HandleCollisionsAction(Action):
         """
         snake = cast.get_actors("snakes")
         food = cast.get_first_actor("foods")
-        head = snake.get_segments ()[0]
+        head = snake.get_segments()[0]
         segments = snake.get_segments()[1:]
         
         snake2 = cast.get_first_actor("snakes2")
